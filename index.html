@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./media/favico.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <title>QUIZZ - BY TEAM 4</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="./script.js" defer></script>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <button class="theme-btn" id="themeBtn">&lt;no-theme&gt;</button>
+    <div class="content">
+      <div class="userDiv"></div>
+      <div class="timeout">Tiden är ute! Vill du börja om?</div>
+      <h1 id="h1">&lt;quizScript&gt;</h1>
+      <input class="user-name" id="username" type="text" placeholder="Your namn" />
+      <div class="button-group">
+        <button class="show-start" id="start-button">starta</button>
+        <button class="leaderboard-btn" id="leaderboard-button">leaderBoard</button>
+        <button id="restart-button" class="show-start hidden">spelaIgen</button>
+      </div>
+      <div id="question-container" class="hidden">
+        <div id="countdown-display">10:00</div>
+        <div id="question"></div>
+        <div id="answer-one"></div>
+        <div id="answer-two"></div>
+        <div id="answer-three"></div>
+        <div id="answer-four"></div>
+      </div>
+      <!-- Ett dolt leaderboard-element -->
+      <div id="leaderboard-container" class="hidden leaderboard-bla">
+        <h2>leaderBoard</h2>
+        <ul id="leaderboard-list"></ul>
+        <button id="close-leaderboard">stäng</button>
+      </div>
+
+      <div id="result-container" class="hidden">
+        <h2>Resultat</h2>
+        <div id="score"></div>
+      </div>
+      <div id="fx-container"></div>
+
+      <button id="pauseBtn" class="pause-button hidden">
+          <svg class="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em">
+          <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+          </svg> Pausa
+      </button>
+      <p id="pause-warning" class="hidden warning-text">Svara på frågan först innan du kan pausa.</p>
+
+      <div id="pause-overlay" class="pause-overlay hidden">  
+        <div class="pause-popup"> 
+          <h2>           
+            <svg class="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+            </svg> Pausad
+        </h2>
+          <p> Spelet är pausad! Bajsa i fred</p>
+          <div id="resumeBtn"><svg class="start-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em">
+          <path d="M3 2v12s6.333-2.833 10.666-6C9.333 4.833 3 2 3 2z"/></svg>Forstätt</div>
+        </div>
+      </div>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1YS6S9KN6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-S1YS6S9KN6");
+      </script>
+    </div>
+  </body> 
+</html>
