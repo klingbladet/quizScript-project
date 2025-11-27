@@ -3,24 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="testa dina kunskaper, fundamental HTML, CSS & javascript. Börja repetera idag, perfekt för nybörjare.">
     <link rel="icon" type="image/x-icon" href="./media/favico.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-
-    <title>QUIZZ - BY TEAM 4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>QuizScript</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="./script.js" defer></script>
   </head>
   <body>
     <canvas id="c"></canvas>
     <button class="theme-btn" id="themeBtn">&lt;no-theme&gt;</button>
-    <div class="content">
+    <main class="content">
+      <button class="new-user hidden" id="newuser">&lt;new-user&gt;</button>
       <div class="userDiv"></div>
       <div class="timeout">Tiden är ute! Vill du börja om?</div>
-      <h1 id="h1">&lt;quizScript&gt;</h1>
-      <input class="user-name" id="username" type="text" placeholder="Your namn" />
+        <p class="quizscript-title">&lt;quizScript&gt;</p>
+        <h1 id="header-title">Fullstack JavaScript Quiz</h1>
+        <label for="username"></label>
+        <input class="user-name" id="username" type="text" placeholder="const namn">
       <div class="button-group">
         <button class="show-start" id="start-button">starta</button>
         <button class="leaderboard-btn" id="leaderboard-button">leaderBoard</button>
@@ -33,7 +36,7 @@
         <div id="answer-two"></div>
         <div id="answer-three"></div>
         <div id="answer-four"></div>
-      </div>
+      </div> 
       <!-- Ett dolt leaderboard-element -->
       <div id="leaderboard-container" class="hidden leaderboard-bla">
         <h2>leaderBoard</h2>
@@ -69,7 +72,7 @@
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1YS6S9KN6"></script>
       <script>
-        window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || []; 
         function gtag() {
           dataLayer.push(arguments);
         }
@@ -77,6 +80,6 @@
 
         gtag("config", "G-S1YS6S9KN6");
       </script>
-    </div>
+    </main>
   </body> 
 </html>
